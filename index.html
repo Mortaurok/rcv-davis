@@ -8,28 +8,28 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
       font-family: 'Segoe UI', Tahoma, sans-serif;
-      background: url('https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1473021893450-163ff1250e2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
       background-size: cover;
-      background-color: #f8f9fa;
+      background-color: #f0f2f5;
       color: #222;
     }
 
     header {
-      background: url('https://images.unsplash.com/photo-1560757470-6b4d03b1b46f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/5/5d/Flag_of_the_United_States_(1912-1959).svg') no-repeat center;
       background-size: cover;
-      height: 180px;
+      height: 200px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
+      border-bottom: 5px solid #c00;
     }
 
     header h1 {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 15px 25px;
       font-size: 2em;
       border-radius: 10px;
     }
@@ -37,16 +37,16 @@
     .container {
       max-width: 760px;
       margin: 0 auto;
-      background: rgba(255, 255, 255, 0.96);
+      background: rgba(255, 255, 255, 0.97);
       padding: 40px 25px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
       border-radius: 12px;
       margin-top: 20px;
       margin-bottom: 60px;
     }
 
     h2 {
-      color: #0057b7;
+      color: #002868; /* Deep navy blue */
       margin-top: 1.5em;
     }
 
@@ -62,16 +62,16 @@
 
     th, td {
       padding: 12px;
-      border: 1px solid #ddd;
+      border: 1px solid #ccc;
       text-align: left;
-      background-color: #f1f8ff;
+      background-color: #f5f9ff;
     }
 
     blockquote {
-      border-left: 4px solid #0057b7;
+      border-left: 4px solid #bf0a30; /* Presidential red */
       margin: 20px 0;
       padding-left: 15px;
-      background: #eaf3ff;
+      background: #fef6f7;
       font-style: italic;
       color: #444;
     }
@@ -84,7 +84,7 @@
     }
 
     a.button {
-      background-color: #0057b7;
+      background-color: #002868;
       color: white;
       padding: 12px 20px;
       text-decoration: none;
@@ -94,7 +94,7 @@
     }
 
     a.button:hover {
-      background-color: #003f8a;
+      background-color: #001d4a;
     }
 
     .signup-form {
@@ -103,26 +103,27 @@
       border-top: 1px solid #ccc;
     }
 
-    .signup-form input[type="email"] {
+    .signup-form input,
+    .signup-form textarea {
+      width: 100%;
       padding: 10px;
-      width: 70%;
-      max-width: 300px;
+      margin: 8px 0;
       border: 1px solid #ccc;
       border-radius: 5px;
-      margin-right: 10px;
     }
 
     .signup-form button {
-      background-color: #0057b7;
+      background-color: #bf0a30;
       color: white;
       padding: 10px 18px;
       border: none;
       border-radius: 5px;
+      font-weight: bold;
       cursor: pointer;
     }
 
     .signup-form button:hover {
-      background-color: #003f8a;
+      background-color: #800000;
     }
 
     footer {
@@ -135,15 +136,6 @@
     @media screen and (max-width: 600px) {
       .button-group {
         flex-direction: column;
-      }
-
-      .signup-form input[type="email"] {
-        width: 100%;
-        margin-bottom: 10px;
-      }
-
-      .signup-form button {
-        width: 100%;
       }
     }
   </style>
@@ -196,10 +188,13 @@
 
     <div class="signup-form">
       <h2>Sign the Petition for Change</h2>
-      <p>Enter your email if you'd like to be contacted about local RCV efforts in Davis:</p>
+      <p>Enter your info if you'd like to support Ranked-Choice Voting in Davis, CA:</p>
       <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="name" placeholder="Your full name" required />
         <input type="email" name="email" placeholder="Your email address" required />
-        <button type="submit">Sign Up</button>
+        <textarea name="message" placeholder="Why do you support ranked-choice voting?" rows="4"></textarea>
+        <input type="hidden" name="_redirect" value="https://yourusername.github.io/rcv-davis/thankyou.html">
+        <button type="submit">Sign the Petition</button>
       </form>
     </div>
 

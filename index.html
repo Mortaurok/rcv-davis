@@ -5,85 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ranked-Choice Voting Explained</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, sans-serif;
+    html, body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(rgba(255,255,255,0.94), rgba(255,255,255,0.94)), url('https://images.unsplash.com/photo-1592772879480-0c3de7cd33b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80') no-repeat center center fixed;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: url('https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
       background-size: cover;
+      background-color: #f8f9fa;
       color: #222;
     }
 
     .container {
       max-width: 760px;
-      margin: auto;
-      padding: 40px 20px;
-      background-color: rgba(255, 255, 255, 0.95);
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.96);
+      padding: 40px 25px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      margin-top: 40px;
+      margin-bottom: 60px;
     }
 
     h1, h2 {
       color: #0057b7;
-      margin-top: 1.5em;
     }
 
     ul {
-      margin-left: 20px;
+      padding-left: 20px;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin: 20px 0;
+      margin-top: 20px;
     }
 
     th, td {
       padding: 12px;
-      border: 1px solid #ccc;
+      border: 1px solid #ddd;
       text-align: left;
-      background-color: #f9f9f9;
+      background-color: #f1f8ff;
     }
 
     blockquote {
       border-left: 4px solid #0057b7;
       margin: 20px 0;
       padding-left: 15px;
-      color: #333;
+      background: #eaf3ff;
       font-style: italic;
-      background: #f2f8ff;
+      color: #444;
     }
 
     .button-group {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 20px;
+      gap: 15px;
+      margin-top: 25px;
     }
 
     a.button {
-      display: inline-block;
-      background: #0057b7;
+      background-color: #0057b7;
       color: white;
       padding: 12px 20px;
       text-decoration: none;
-      border-radius: 6px;
       font-weight: bold;
-      transition: background 0.2s ease-in-out;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
     }
 
     a.button:hover {
-      background: #003f8a;
+      background-color: #003f8a;
     }
 
     footer {
       text-align: center;
-      margin-top: 50px;
       font-size: 0.9em;
       color: #555;
+      margin-top: 40px;
     }
 
-    @media (max-width: 600px) {
+    @media screen and (max-width: 600px) {
       .button-group {
         flex-direction: column;
       }
@@ -121,4 +123,20 @@
       </tr>
       <tr>
         <td>Isn’t this too radical?</td>
-        <td>It’s used in Maine, Alaska, NYC, San Fra
+        <td>It’s used in Maine, Alaska, NYC, San Francisco—and even Utah cities. It works.</td>
+      </tr>
+    </table>
+
+    <h2>Fair Elections Are American</h2>
+    <blockquote>This isn’t about left or right. It’s about a voting system that reflects what the people really want. RCV gives you more voice, more choice, and real representation.</blockquote>
+
+    <h2>Take Action</h2>
+    <div class="button-group">
+      <a href="https://fairvoteca.org" target="_blank" class="button">Join the California Campaign</a>
+      <a href="https://www.fairvote.org/rcv" target="_blank" class="button">Learn More at FairVote</a>
+    </div>
+
+    <footer>Page created by Davis RCV Advocates • Built with ❤️ using GitHub Pages</footer>
+  </div>
+</body>
+</html>

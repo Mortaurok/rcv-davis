@@ -16,9 +16,10 @@
     }
 
     header {
-      background: url('https://upload.wikimedia.org/wikipedia/commons/5/5d/Flag_of_the_United_States_(1912-1959).svg') no-repeat center;
+      position: relative;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/e/e4/Flag_of_the_United_States_(waving).jpg') no-repeat center;
       background-size: cover;
-      height: 200px;
+      height: 220px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -32,6 +33,19 @@
       padding: 15px 25px;
       font-size: 2em;
       border-radius: 10px;
+      z-index: 2;
+    }
+
+    .logo-overlay {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 0.9em;
+      color: #002868;
     }
 
     .container {
@@ -46,7 +60,7 @@
     }
 
     h2 {
-      color: #002868; /* Deep navy blue */
+      color: #002868;
       margin-top: 1.5em;
     }
 
@@ -68,7 +82,7 @@
     }
 
     blockquote {
-      border-left: 4px solid #bf0a30; /* Presidential red */
+      border-left: 4px solid #bf0a30;
       margin: 20px 0;
       padding-left: 15px;
       background: #fef6f7;
@@ -137,12 +151,19 @@
       .button-group {
         flex-direction: column;
       }
+
+      .logo-overlay {
+        right: 10px;
+        bottom: 5px;
+        font-size: 0.8em;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Ranked-Choice Voting: A Better Way to Vote</h1>
+    <div class="logo-overlay">A CurryWood Production</div>
   </header>
 
   <div class="container">
@@ -189,7 +210,7 @@
     <div class="signup-form">
       <h2>Sign the Petition for Change</h2>
       <p>Enter your info if you'd like to support Ranked-Choice Voting in Davis, CA:</p>
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form action="https://formspree.io/f/mldnaleg" method="POST">
         <input type="text" name="name" placeholder="Your full name" required />
         <input type="email" name="email" placeholder="Your email address" required />
         <textarea name="message" placeholder="Why do you support ranked-choice voting?" rows="4"></textarea>
